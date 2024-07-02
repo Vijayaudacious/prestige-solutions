@@ -1,0 +1,71 @@
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+}
+
+.customDivider {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  border-top: 2px solid #333;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.textCol {
+  padding: 20px;
+  text-align: justify;
+}
+
+.imageCol {
+  padding: 20px;
+  text-align: center;
+
+  .image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
