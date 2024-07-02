@@ -1,0 +1,75 @@
+.homeContainer {
+  height: 100vh;
+  background: url("https://www.shutterstock.com/image-illustration/business-technology-internet-network-concept-260nw-2046543401.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  color: white;
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+.homeContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+}
+
+.content h1 {
+  font-size: 24px;
+  color: #ff5c93;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.features li::before {
+  content: "✔";
+  color: #ff5c93;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.purchaseButton {
+  background: linear-gradient(to right, #ff5c93, #ff66b4);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.purchaseButton:hover {
+  background: linear-gradient(to right, #ff66b4, #ff5c93);
+}
