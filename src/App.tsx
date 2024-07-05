@@ -7,6 +7,9 @@ import ContactUs from "./Component/ContactUs";
 import OurServices from "./Component/OurServices";
 import Footer from "./Component/Footer";
 
+import "./App.less";
+
+
 const { Content } = Layout;
 
 const App: React.FC = () => {
@@ -16,10 +19,10 @@ const App: React.FC = () => {
       <Content style={{ marginTop: "50px" }}>
         <Home />
         <AboutUs />
-        <ContactUs />
+        {/* <ContactUs />
         <OurServices />
-      </Content>
-      <Footer />
+        <Footer /> */}
+        </Content>
     </Layout>
   );
 };

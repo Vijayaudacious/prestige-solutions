@@ -1,75 +1,130 @@
 .homeContainer {
-  height: 100vh;
-  // background: url("../../assets/Images/home.png");
-  background: url("https://www.shutterstock.com/image-illustration/business-technology-internet-network-concept-260nw-2046543401.jpg");
+  background: url("../../assets/Images/home.png");
+  // background: url("https://www.shutterstock.com/image-illustration/business-technology-internet-network-concept-260nw-2046543401.jpg");
   background-size: cover;
   display: flex;
   align-items: start;
   justify-content: start;
+  height: 100vh;
+  text-align: start;
   color: white;
-  text-align: left;
-  position: relative;
+}
+
+.contentRow {
   width: 100%;
 }
 
-.homeContainer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 20px;
+  text-align: start;
 }
 
 .content {
-  position: relative;
-  z-index: 2;
   max-width: 600px;
+  background: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
   padding: 20px;
-  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content h1 {
-  font-size: 24px;
-  color: #ff5c93;
-  margin-bottom: 10px;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff00ca;
+  margin: 10px 0;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  transition: all 0.2s ease-in-out; /* Smooth transition for size changes */
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
 }
 
-.content h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.cursor {
+  display: inline-block;
+  background: white;
+  margin-left: 5px;
+  width: 2px;
+  height: 2rem;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: white;
+  margin: 5px 0;
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.8rem;
+  }
 }
 
 .features {
   list-style: none;
   padding: 0;
   margin: 20px 0;
-}
 
-.features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
+  li,
+  p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 10px;
 
-.features li::before {
-  content: "✔";
-  color: #ff5c93;
-  font-size: 20px;
-  margin-right: 10px;
+    @media (max-width: 600px) {
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .purchaseButton {
-  background: linear-gradient(to right, #ff5c93, #ff66b4);
-  border: none;
+  font-size: 1.2rem;
   padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+  background: #ec18ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s;
 
-.purchaseButton:hover {
-  background: linear-gradient(to right, #ff66b4, #ff5c93);
+  &:hover {
+    background: #40a9ff;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+  }
 }

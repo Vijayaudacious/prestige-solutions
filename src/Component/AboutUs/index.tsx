@@ -13,13 +13,10 @@ const AboutUs: React.FC = () => {
 
   return (
     <div className={styles.container} id="about">
-      <Divider className={styles.customDivider} >
-        About Us
-      </Divider>
+      <Divider className={styles.customDivider}>About Us</Divider>
 
       <div className={styles.section}>
-        <Row gutter={[16, 16]} className={styles.cardRow}>
-          <Col md={3}></Col>
+        <Row justify="center" gutter={[16, 16]} className={styles.cardRow}>
           <Col xs={24} md={8} className={styles.textCol} data-aos="fade-right">
             <Title level={3}>
               Prestige consultant, a renowned and leading Job Placement
@@ -51,8 +48,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       <div className={styles.section}>
-        <Row gutter={[16, 16]} className={styles.cardRow}>
-          <Col md={3}></Col>
+        <Row justify="center" gutter={[16, 16]} className={styles.cardRow}>
           <Col xs={24} md={8} className={styles.imageCol} data-aos="fade-right">
             <img
               src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/921054574BusinessSpecialist.jpg=ws1280x960"
@@ -73,8 +69,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       <div className={styles.section}>
-        <Row gutter={[16, 16]} className={styles.cardRow}>
-          <Col md={5}></Col>
+        <Row justify="center" gutter={[16, 16]} className={styles.cardRow}>
           <Col xs={24} md={8} className={styles.textCol} data-aos="fade-right">
             <Title level={3}>Staffing solutions for companies</Title>
             <Paragraph>
