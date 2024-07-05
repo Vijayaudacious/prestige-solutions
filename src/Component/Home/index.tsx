@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row, Col, Button, Space } from "antd";
 import styles from "./styles.module.less";
 import useTypingEffect from "../../Hook/useTypingEffect/useTypingEffect";
