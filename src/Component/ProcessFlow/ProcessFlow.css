@@ -1,0 +1,75 @@
+.header-section {
+    background-color: #6b8e23; /* Olive green background */
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .header-title {
+    color: white;
+    margin: 0;
+  }
+  
+  .process-flow {
+    margin-top: 20px;
+  }
+  
+  .process-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .process-step {
+    text-align: center;
+    position: relative;
+  }
+  
+  .process-card {
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin: 0 10px;
+  }
+  
+  .card-content {
+    white-space: pre-wrap; /* Allow line breaks within the text */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .arrow {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+  }
+  
+  .right-arrow {
+    background-color: #b0c4de; /* Light blue for arrows */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .process-row {
+      flex-direction: column;
+    }
+  
+    .arrow {
+      display: none;
+    }
+  
+    .process-step {
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -33,7 +33,7 @@ const Home: React.FC = () => {
               <p>But also the perfect fit.</p>
             </p>
           </Space>
-          <Button type="primary" className={styles.purchaseButton}>
+          <Button size="large" type="primary" className={styles.purchaseButton}>
             Contact Now
           </Button>
         </Col>

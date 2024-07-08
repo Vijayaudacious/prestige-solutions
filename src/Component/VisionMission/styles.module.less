@@ -1,0 +1,88 @@
+.mainContainer {
+  background: url("https://wallpapers.com/images/hd/white-abstract-distorted-grid-lines-u9nhbnh4kx3tnyqj.jpg");
+  background-size: cover;
+}
+
+.headerSection {
+  background-color: #6b8e23; /* Olive green background */
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+}
+
+.headerTitle {
+  color: white;
+  margin: 0;
+}
+
+.contentSection {
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 71vh;
+}
+
+/* Card styles */
+.missionCard,
+.visionCard {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.missionCard {
+  background-color: #e0f7fa; /* Light blue background */
+}
+
+.visionCard {
+  background-color: #ffe0b2; /* Light orange background */
+}
+.description {
+  color: rgb(142, 142, 142);
+  font-size: 18px;
+}
+
+/* Animation styles */
+.slideLeft {
+  animation: slideInLeft 1s forwards;
+}
+
+.slideRight {
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-section {
+    text-align: center;
+  }
+
+  .missionCard,
+  .visionCard {
+    margin: 10px 0;
+  }
+}

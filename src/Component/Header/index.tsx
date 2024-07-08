@@ -17,6 +17,12 @@ const Header: React.FC = () => {
             About Us
           </Link>
         </Menu.Item>
+
+        <Menu.Item key="processing" className={styles.title}>
+          <Link to="processing" smooth={true} duration={2000}>
+            Our Processing
+          </Link>
+        </Menu.Item>
         <Menu.Item key="services" className={styles.title}>
           <Link to="services" smooth={true} duration={500}>
             Our Services

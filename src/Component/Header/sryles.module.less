@@ -1,14 +1,94 @@
+// .header {
+//   justify-content: center;
+//   position: fixed;
+//   width: 100%;
+//   height: 66px;
+//   font-size: 20px;
+//   font-family: cursive;
+//   color: white;
+//   font-weight: bolder;
+//   z-index: 123;
+//   .title {
+//     margin-top: 15px;
+//   }
+// }
+
+// .header .ant-menu-item:hover,
+// .header .ant-menu-item-active,
+// .header .ant-menu-item-selected {
+//   color: @hover-color;
+//   border-bottom: 2px solid #1890ff;
+// }
+
+@header-bg-color: #1f1f1f; // Dark background color
+@link-color: #ffffff; // White link color
+@hover-color: #40a9ff; // Ant Design primary color for hover
+@active-color: #1890ff; // Active link color
+@font-size: 26px; // Font size for links
+@transition-duration: 0.3s; // Transition duration for effects
+
 .header {
+  background-color: @header-bg-color;
+  display: flex;
   justify-content: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  height: 66px;
-  font-size: 20px;
-  font-family: cursive;
-  color: white;
-  font-weight: bolder;
-  z-index: 123;
-  .title {
-    margin-top: 15px;
+  z-index: 1000;
+}
+
+.header .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.header .ant-menu-item {
+  color: @link-color;
+  font-size: @font-size;
+  transition: color @transition-duration ease-in-out,
+    border-bottom-color @transition-duration ease-in-out;
+}
+
+.header .ant-menu-item:hover,
+.header .ant-menu-item-active,
+.header .ant-menu-item-selected {
+  color: @hover-color;
+  border-bottom: 2px solid @active-color;
+}
+
+.header .ant-menu-item > a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 10px 15px;
+}
+
+.header .ant-menu-item > a:hover {
+  color: @hover-color;
+}
+
+.title {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .header .ant-menu-horizontal {
+    width: 100%;
+  }
+
+  .header .ant-menu-item {
+    width: 100%;
+    text-align: left;
+  }
+
+  .header .ant-menu-item > a {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    width: 100%;
   }
 }
