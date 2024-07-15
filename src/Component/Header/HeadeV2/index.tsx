@@ -1,41 +1,47 @@
+import { Button, Layout, Menu } from "antd";
 import React from "react";
-import { Menu } from "antd";
 import { Link } from "react-scroll";
-import styles from "./sryles.module.less";
+import "./Header.css"; // Import your CSS file
 
-const Header: React.FC = () => {
+const { Header } = Layout;
+
+const AppHeader: React.FC = () => {
   return (
-    <>
-      <Menu mode="horizontal" theme="dark" className={styles.header}>
+    <Header className="header">
+      <div className="logo">Ciseco.</div>
+      <Menu mode="horizontal" className="menu">
         <Menu.Item key="home">
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
         </Menu.Item>
-        <Menu.Item key="about" className={styles.title}>
+        <Menu.Item key="about">
           <Link to="about" smooth={true} duration={500}>
             About Us
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="processing" className={styles.title}>
+        <Menu.Item key="processing">
           <Link to="processing" smooth={true} duration={2000}>
             Our Processing
           </Link>
         </Menu.Item>
-        <Menu.Item key="services" className={styles.title}>
+        <Menu.Item key="services">
           <Link to="services" smooth={true} duration={500}>
             Our Services
           </Link>
         </Menu.Item>
-        <Menu.Item key="contact" className={styles.title}>
+        <Menu.Item key="contact">
           <Link to="contact" smooth={true} duration={500}>
             Contact Us
           </Link>
         </Menu.Item>
       </Menu>
-    </>
+      <Button className="contactBtn" type="primary">
+        Contact
+      </Button>
+    </Header>
   );
 };
 
-export default Header;
+export default AppHeader;

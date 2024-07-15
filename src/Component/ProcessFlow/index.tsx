@@ -20,37 +20,39 @@ const steps = [
 
 const ProcessFlow = () => {
   return (
-    <div className="process-flow" id="processing">
-      <HeaderTitle title="Our Processing" />
-      <Divider />
-      <Row gutter={[20, 20]} justify="center">
-        {steps.slice(0, 5).map((step, index) => (
-          <Col key={index} className="process-step">
-            <Card
-              className="process-card"
-              style={{ backgroundColor: step.color }}
-            >
-              <div className="card-content">{step.title}</div>
-            </Card>
-            {index < 4 && <div className="arrow right-arrow"></div>}
-          </Col>
-        ))}
-      </Row>
-      <Divider />
-      <Row gutter={[20, 20]} justify="center">
-        {steps.slice(5).map((step, index) => (
-          <Col key={index} className="process-step">
-            <Card
-              className="process-card"
-              style={{ backgroundColor: step.color }}
-            >
-              <div className="card-content">{step.title}</div>
-            </Card>
-            {index < 2 && <div className="arrow right-arrow"></div>}
-          </Col>
-        ))}
-      </Row>
-    </div>
+    <>
+      <div className="process-flow" id="processing">
+        <HeaderTitle title="Our Processing" />
+        <Divider />
+        <Row gutter={[20, 20]} justify="center">
+          {steps.slice(0, 5).map((step, index) => (
+            <Col key={index} className="process-step">
+              <Card
+                className="process-card"
+                style={{ backgroundColor: step.color }}
+              >
+                <div className="card-content">{step.title}</div>
+              </Card>
+              {index < 4 && <div className="arrow right-arrow"></div>}
+            </Col>
+          ))}
+        </Row>
+        <Divider />
+        <Row gutter={[20, 20]} justify="center">
+          {steps.slice(5).map((step, index) => (
+            <Col key={index} className="process-step">
+              <Card
+                className="process-card"
+                style={{ backgroundColor: step.color }}
+              >
+                <div className="card-content">{step.title}</div>
+              </Card>
+              {index < 2 && <div className="arrow right-arrow"></div>}
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </>
   );
 };
 
